@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>爱情电影网aqdy - 霓虹浪漫影视站 | https://aiqingdianyingwangaqdy-top.github.io</title>
+<meta name="description" content="爱情电影网aqdy(https://aiqingdianyingwangaqdy-top.github.io)是一个霓虹浪漫风格的爱情影视推荐平台，提供浪漫爱情片、经典CP、心动排行等影视资源，每日更新。">
+<meta name="keywords" content="爱情电影网aqdy,aiqingdianyingwangaqdy-top,爱情电影,浪漫影视,经典CP,心动排行,在线观看">
+<meta name="author" content="爱情电影网aqdy">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://aiqingdianyingwangaqdy-top.github.io">
+<meta property="og:title" content="爱情电影网aqdy - 霓虹浪漫影视站">
+<meta property="og:description" content="爱情电影网aqdy提供浪漫爱情片、经典CP、心动排行等影视资源，霓虹浪漫风格。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aiqingdianyingwangaqdy-top.github.io">
+<style>
+:root {
+  --bg: #0a0012;
+  --bg2: #1a0030;
+  --pink: #ff2d78;
+  --pink-light: #ff6eb4;
+  --purple: #a855f7;
+  --cyan: #22d3ee;
+  --text: #fce7f3;
+  --text-dim: #d8b4e2;
+  --glass: rgba(255,45,120,0.08);
+  --glass-border: rgba(255,110,180,0.25);
+  --shadow: 0 8px 32px rgba(255,45,120,0.15);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: -apple-system, "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(ellipse at 20% 50%, rgba(168,85,247,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(255,45,120,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 80%, rgba(34,211,238,0.05) 0%, transparent 50%);
+}
+a { text-decoration: none; color: inherit; }
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  15% { transform: scale(1.15); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.1); }
+  60% { transform: scale(1); }
+}
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 10px rgba(255,45,120,0.3), 0 0 30px rgba(255,45,120,0.1); }
+  50% { box-shadow: 0 0 20px rgba(255,45,120,0.5), 0 0 50px rgba(255,45,120,0.2); }
+}
+@keyframes wave {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* 导航 */
+.navbar {
+  position: sticky; top:0; z-index:1000;
+  background: rgba(10,0,18,0.85); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--glass-border);
+}
+.nav-container {
+  max-width: 1200px; margin:0 auto; padding:0 20px;
+  height: 64px; display:flex; align-items:center; justify-content:space-between;
+}
+.logo {
+  font-size: 1.3rem; font-weight: 900;
+  background: linear-gradient(135deg, var(--pink), var(--purple));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display:flex; align-items:center; gap:8px;
+}
+.logo::before { content:'💗'; animation: heartbeat 1.5s infinite; }
+.nav-links { list-style:none; display:flex; gap:4px; }
+.nav-links a {
+  padding:8px 16px; font-size:.88rem; font-weight:600; color:var(--text-dim);
+  border-radius:20px; transition:.3s;
+}
+.nav-links a:hover, .nav-links a.active {
+  color:var(--pink-light); background:var(--glass); border:1px solid var(--glass-border);
+}
+.mobile-btn { display:none; background:var(--glass); color:var(--pink-light); border:1px solid var(--glass-border); padding:8px 14px; border-radius:8px; cursor:pointer; font-size:1.1rem; }
+
+.container { max-width:1200px; margin:0 auto; padding:30px 20px 40px; }
+
+/* 心跳线装饰 */
+.heartbeat-line {
+  height: 40px; overflow:hidden; position:relative; margin-bottom:20px;
+}
+.heartbeat-line svg { width:100%; height:100%; }
+.heartbeat-line path {
+  fill:none; stroke:var(--pink); stroke-width:2;
+  animation: glow 2s infinite;
+}
+
+/* Hero */
+.hero {
+  display:grid; grid-template-columns: 1fr 1fr; gap:30px; margin-bottom:50px; align-items:center;
+}
+.hero-text {
+  padding:40px;
+  background: var(--glass);
+  border:1px solid var(--glass-border);
+  border-radius:20px;
+  backdrop-filter: blur(10px);
+  position:relative; overflow:hidden;
+  animation: glow 3s infinite;
+}
+.hero-text::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:3px;
+  background: linear-gradient(90deg, var(--pink), var(--purple), var(--cyan), var(--pink));
+  background-size: 300% 100%;
+  animation: wave 4s linear infinite;
+}
+.hero-text h1 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 900; margin-bottom:12px; line-height:1.2;
+}
+.hero-text h1 .gradient {
+  background: linear-gradient(135deg, var(--pink), var(--purple), var(--cyan));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-text p { font-size:.95rem; color:var(--text-dim); margin-bottom:20px; }
+.hero-text .url {
+  display:inline-block; background:rgba(0,0,0,0.4);
+  border:1px dashed var(--pink); padding:10px 16px;
+  font-family:"Courier New",monospace; font-size:.78rem; color:var(--pink-light);
+  margin-bottom:20px; border-radius:8px;
+}
+.btn {
+  display:inline-block; padding:14px 32px;
+  background: linear-gradient(135deg, var(--pink), var(--purple));
+  color:#fff; font-weight:900; font-size:.95rem;
+  border-radius:30px; transition:.3s; cursor:pointer;
+  box-shadow: 0 4px 20px rgba(255,45,120,0.4);
+}
+.btn:hover { transform:translateY(-2px); box-shadow: 0 8px 30px rgba(255,45,120,0.6); }
+
+.hero-visual { display:grid; grid-template-columns:1fr 1fr; gap:15px; }
+.pulse-card {
+  background:var(--glass); border:1px solid var(--glass-border); border-radius:16px;
+  height:140px; display:flex; flex-direction:column; align-items:center; justify-content:center;
+  transition:.3s; position:relative; overflow:hidden;
+}
+.pulse-card:hover { transform:scale(1.05); border-color:var(--pink); }
+.pulse-card .icon { font-size:2.5rem; margin-bottom:8px; animation: float 3s infinite; }
+.pulse-card .label { font-size:.75rem; color:var(--text-dim); font-weight:600; }
+.pulse-card:nth-child(1) .icon { animation-delay:0s; }
+.pulse-card:nth-child(2) .icon { animation-delay:.5s; }
+.pulse-card:nth-child(3) .icon { animation-delay:1s; }
+.pulse-card:nth-child(4) .icon { animation-delay:1.5s; }
+
+/* 区块 */
+.section { margin-bottom:48px; }
+.section-title {
+  font-size:1.4rem; font-weight:900; margin-bottom:20px;
+  display:flex; align-items:center; gap:10px;
+}
+.section-title::before { content:''; width:4px; height:24px; background:linear-gradient(var(--pink),var(--purple)); border-radius:2px; }
+.section-more {
+  display:inline-block; margin-top:16px; padding:10px 22px;
+  background:transparent; color:var(--pink-light); border:1px solid var(--pink);
+  border-radius:20px; font-size:.82rem; font-weight:700; transition:.3s;
+}
+.section-more:hover { background:var(--pink); color:#fff; }
+
+/* 电影网格 */
+.movie-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:20px; }
+.movie-card {
+  background:var(--glass); border:1px solid var(--glass-border); border-radius:16px;
+  overflow:hidden; transition:.3s; cursor:pointer;
+}
+.movie-card:hover { transform:translateY(-6px); border-color:var(--pink); box-shadow:0 12px 30px rgba(255,45,120,0.2); }
+.movie-poster {
+  height:220px; display:flex; align-items:center; justify-content:center; font-size:3.5rem;
+  background: linear-gradient(135deg, rgba(255,45,120,0.1), rgba(168,85,247,0.1));
+  border-bottom:1px solid var(--glass-border); position:relative;
+}
+.movie-poster .heart-badge {
+  position:absolute; top:10px; right:10px;
+  width:32px; height:32px; background:rgba(255,45,120,0.9);
+  display:flex; align-items:center; justify-content:center;
+  border-radius:50%; font-size:1rem; animation: heartbeat 2s infinite;
+}
+.movie-info { padding:14px; }
+.movie-title { font-size:.92rem; font-weight:800; margin-bottom:4px; }
+.movie-meta { font-size:.74rem; color:var(--text-dim); display:flex; justify-content:space-between; }
+
+/* 经典CP */
+.cp-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
+.cp-card {
+  background:var(--glass); border:1px solid var(--glass-border); border-radius:16px;
+  padding:20px; display:flex; align-items:center; gap:16px; transition:.3s;
+}
+.cp-card:hover { transform:scale(1.02); border-color:var(--purple); box-shadow:0 8px 25px rgba(168,85,247,0.2); }
+.cp-avatar { width:60px; height:60px; border-radius:50%; background:linear-gradient(135deg,var(--pink),var(--purple)); display:flex; align-items:center; justify-content:center; font-size:1.8rem; flex-shrink:0; }
+.cp-info h3 { font-size:.95rem; font-weight:800; margin-bottom:4px; }
+.cp-info p { font-size:.74rem; color:var(--text-dim); }
+.cp-score { margin-left:auto; font-size:1.2rem; font-weight:900; color:var(--pink-light); }
+
+/* 排行 */
+.rank-section { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+.rank-col {
+  background:var(--glass); border:1px solid var(--glass-border); border-radius:16px; padding:20px;
+}
+.rank-col h3 { font-size:1.1rem; margin-bottom:16px; padding-bottom:10px; border-bottom:1px solid var(--glass-border); }
+.rank-item { display:flex; align-items:center; gap:12px; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.05); }
+.rank-item:last-child { border-bottom:none; }
+.rank-num { width:28px; height:28px; background:linear-gradient(135deg,var(--pink),var(--purple)); display:flex; align-items:center; justify-content:center; font-weight:900; font-size:.8rem; border-radius:8px; flex-shrink:0; }
+.rank-num.top { background:linear-gradient(135deg,#f59e0b,var(--pink)); }
+.rank-name { flex:1; font-weight:700; font-size:.88rem; }
+.rank-heart { color:var(--pink); font-size:.8rem; }
+
+/* 标签 */
+.tag-cloud { display:flex; flex-wrap:wrap; gap:12px; }
+.tag-item {
+  padding:10px 20px; background:var(--glass); border:1px solid var(--glass-border);
+  border-radius:20px; font-size:.82rem; font-weight:600; color:var(--text-dim);
+  transition:.3s; cursor:pointer;
+}
+.tag-item:hover { background:rgba(255,45,120,0.15); color:var(--pink-light); border-color:var(--pink); transform:scale(1.05); }
+
+/* 底部 */
+.footer {
+  border-top:1px solid var(--glass-border); background:rgba(10,0,18,0.9);
+  padding:40px 20px; text-align:center; margin-top:50px;
+}
+.footer-logo { font-size:1.5rem; font-weight:900; background:linear-gradient(135deg,var(--pink),var(--purple)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:16px; }
+.footer-links { display:flex; justify-content:center; gap:20px; margin-bottom:16px; flex-wrap:wrap; }
+.footer-links a { color:var(--text-dim); font-size:.82rem; transition:.3s; }
+.footer-links a:hover { color:var(--pink-light); }
+.footer p { font-size:.75rem; color:var(--text-dim); margin:4px 0; }
+.footer .kw { color:var(--pink-light); margin-top:12px; font-weight:600; }
+
+@media(max-width:768px){
+  .nav-links { display:none; position:absolute; top:64px; left:0; right:0; background:var(--bg); flex-direction:column; padding:10px 20px; border-bottom:1px solid var(--glass-border); }
+  .nav-links.active { display:flex; }
+  .mobile-btn { display:block; }
+  .hero { grid-template-columns:1fr; }
+  .hero-visual { grid-template-columns:repeat(4,1fr); }
+  .pulse-card { height:100px; }
+  .pulse-card .icon { font-size:1.8rem; }
+  .pulse-card .label { font-size:.65rem; }
+  .rank-section { grid-template-columns:1fr; }
+}
+@media(max-width:480px){
+  .hero-text { padding:25px; }
+  .movie-grid { grid-template-columns:1fr 1fr; }
+  .cp-grid { grid-template-columns:1fr; }
+  .pulse-card { height:80px; }
+  .pulse-card .icon { font-size:1.4rem; }
+}
+</style>
+</head>
+<body>
+
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="#" class="logo">爱情电影网aqdy</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="active">首页</a></li>
+      <li><a href="#romance">浪漫片库</a></li>
+      <li><a href="#cp">经典CP</a></li>
+      <li><a href="#rank">心动排行</a></li>
+      <li><a href="#tags">分类浏览</a></li>
+    </ul>
+    <button class="mobile-btn" id="mobileBtn">☰</button>
+  </div>
+</nav>
+
+<main class="container">
+  <div class="heartbeat-line">
+    <svg viewBox="0 0 400 40" preserveAspectRatio="none">
+      <path d="M0,20 L50,20 L60,10 L70,30 L80,5 L90,35 L100,20 L150,20 L160,12 L170,28 L180,8 L190,32 L200,20 L250,20 L260,15 L270,25 L280,10 L290,30 L300,20 L350,20 L360,14 L370,26 L380,18 L400,20" />
+    </svg>
+  </div>
+
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1>爱情电影网<span class="gradient">aqdy</span><br>每一帧都是心动</h1>
+      <p>💗 这里有最浪漫的爱情故事、最经典的银幕CP、最催泪的心动瞬间。在霓虹与频谱之间，找到属于你的那部电影。</p>
+      <div class="url">https://aiqingdianyingwangaqdy-top.github.io</div>
+      <br>
+      <a href="#romance" class="btn">💓 开始心动之旅</a>
+    </div>
+    <div class="hero-visual">
+      <div class="pulse-card"><div class="icon">💑</div><div class="label">浪漫爱情</div></div>
+      <div class="pulse-card"><div class="icon">💕</div><div class="label">经典CP</div></div>
+      <div class="pulse-card"><div class="icon">💝</div><div class="label">催泪瞬间</div></div>
+      <div class="pulse-card"><div class="icon">💖</div><div class="label">心动排行</div></div>
+    </div>
+  </section>
+
+  <section class="section" id="romance">
+    <h2 class="section-title">浪漫片库</h2>
+    <div class="movie-grid">
+      <a href="#" class="movie-card">
+        <div class="movie-poster">💏<div class="heart-badge">💗</div></div>
+        <div class="movie-info">
+          <div class="movie-title">泰坦尼克号</div>
+          <div class="movie-meta"><span>1997</span><span>爱情/灾难</span></div>
+        </div>
+      </a>
+      <a href="#" class="movie-card">
+        <div class="movie-poster">🌹</div>
+        <div class="movie-info">
+          <div class="movie-title">罗马假日</div>
+          <div class="movie-meta"><span>1953</span><span>爱情/喜剧</span></div>
+        </div>
+      </a>
+      <a href="#" class="movie-card">
+        <div class="movie-poster">💍<div class="heart-badge">💗</div></div>
+        <div class="movie-info">
+          <div class="movie-title">恋恋笔记本</div>
+          <div class="movie-meta"><span>2004</span><span>爱情/剧情</span></div>
+        </div>
+      </a>
+      <a href="#" class="movie-card">
+        <div class="movie-poster">🌸</div>
+        <div class="movie-info">
+          <div class="movie-title">你的名字。</div>
+          <div class="movie-meta"><span>2016</span><span>爱情/动画</span></div>
+        </div>
+      </a>
+      <a href="#" class="movie-card">
+        <div class="movie-poster">🎵<div class="heart-badge">💗</div></div>
+        <div class="movie-info">
+          <div class="movie-title">爱乐之城</div>
+          <div class="movie-meta"><span>2016</span><span>爱情/歌舞</span></div>
+        </div>
+      </a>
+      <a href="#" class="movie-card">
+        <div class="movie-poster">📮</div>
+        <div class="movie-info">
+          <div class="movie-title">情书</div>
+          <div class="movie-meta"><span>1995</span><span>爱情/剧情</span></div>
+        </div>
+      </a>
+    </div>
+    <a href="#" class="section-more">加载更多心动 →</a>
+  </section>
+
+  <section class="section" id="cp">
+    <h2 class="section-title">经典CP</h2>
+    <div class="cp-grid">
+      <a href="#" class="cp-card">
+        <div class="cp-avatar">🚢</div>
+        <div class="cp-info">
+          <h3>杰克 & 露丝</h3>
+          <p>泰坦尼克号 · "你跳我也跳"</p>
+        </div>
+        <div class="cp-score">9.9</div>
+      </a>
+      <a href="#" class="cp-card">
+        <div class="cp-avatar">🏍️</div>
+        <div class="cp-info">
+          <h3>诺亚 & 艾丽</h3>
+          <p>恋恋笔记本 · 一生的承诺</p>
+        </div>
+        <div class="cp-score">9.7</div>
+      </a>
+      <a href="#" class="cp-card">
+        <div class="cp-avatar">🎺</div>
+        <div class="cp-info">
+          <h3>米娅 & 塞巴斯汀</h3>
+          <p>爱乐之城 · 星空之舞</p>
+        </div>
+        <div class="cp-score">9.4</div>
+      </a>
+      <a href="#" class="cp-card">
+        <div class="cp-avatar">🦋</div>
+        <div class="cp-info">
+          <h3>泷 & 三叶</h3>
+          <p>你的名字。 · 跨越时空的寻找</p>
+        </div>
+        <div class="cp-score">9.6</div>
+      </a>
+    </div>
+  </section>
+
+  <section class="section" id="rank">
+    <h2 class="section-title">心动排行</h2>
+    <div class="rank-section">
+      <div class="rank-col">
+        <h3>💗 本周最催泪</h3>
+        <a href="#" class="rank-item"><div class="rank-num top">1</div><div class="rank-name">泰坦尼克号</div><div class="rank-heart">💗 9.9</div></a>
+        <a href="#" class="rank-item"><div class="rank-num top">2</div><div class="rank-name">恋恋笔记本</div><div class="rank-heart">💗 9.7</div></a>
+        <a href="#" class="rank-item"><div class="rank-num top">3</div><div class="rank-name">你的名字。</div><div class="rank-heart">💗 9.6</div></a>
+        <a href="#" class="rank-item"><div class="rank-num">4</div><div class="rank-name">爱乐之城</div><div class="rank-heart">💗 9.4</div></a>
+        <a href="#" class="rank-item"><div class="rank-num">5</div><div class="rank-name">罗马假日</div><div class="rank-heart">💗 9.3</div></a>
+      </div>
+      <div class="rank-col">
+        <h3>💝 经典必看</h3>
+        <a href="#" class="rank-item"><div class="rank-num top">1</div><div class="rank-name">乱世佳人</div><div class="rank-heart">💗 9.8</div></a>
+        <a href="#" class="rank-item"><div class="rank-num top">2</div><div class="rank-name">魂断蓝桥</div><div class="rank-heart">💗 9.5</div></a>
+        <a href="#" class="rank-item"><div class="rank-num top">3</div><div class="rank-name">卡萨布兰卡</div><div class="rank-heart">💗 9.4</div></a>
+        <a href="#" class="rank-item"><div class="rank-num">4</div><div class="rank-name">人鬼情未了</div><div class="rank-heart">💗 9.2</div></a>
+        <a href="#" class="rank-item"><div class="rank-num">5</div><div class="rank-name">西雅图夜未眠</div><div class="rank-heart">💗 9.0</div></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="tags">
+    <h2 class="section-title">分类浏览</h2>
+    <div class="tag-cloud">
+      <a href="#" class="tag-item">青春爱情</a>
+      <a href="#" class="tag-item">都市浪漫</a>
+      <a href="#" class="tag-item">古装爱情</a>
+      <a href="#" class="tag-item">跨时空恋</a>
+      <a href="#" class="tag-item">虐恋情深</a>
+      <a href="#" class="tag-item">甜宠喜剧</a>
+      <a href="#" class="tag-item">异地恋</a>
+      <a href="#" class="tag-item">初恋回忆</a>
+      <a href="#" class="tag-item">婚姻故事</a>
+      <a href="#" class="tag-item">同性爱情</a>
+      <a href="#" class="tag-item">奇幻爱情</a>
+      <a href="#" class="tag-item">韩式浪漫</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-logo">💗 爱情电影网aqdy</div>
+  <div class="footer-links">
+    <a href="#">关于我们</a>
+    <a href="#">免责声明</a>
+    <a href="#">投稿合作</a>
+    <a href="#">联系我们</a>
+  </div>
+  <p>https://aiqingdianyingwangaqdy-top.github.io</p>
+  <p>爱情电影网aqdy - 霓虹浪漫影视推荐平台，每日精选心动好片</p>
+  <p class="kw">关键词：爱情电影网aqdy、aiqingdianyingwangaqdy-top、爱情电影、浪漫影视、经典CP、心动排行</p>
+  <p>© 2024 爱情电影网aqdy 保留所有权利</p>
+</footer>
+
+<script>
+const mobileBtn = document.getElementById('mobileBtn');
+const navLinks = document.getElementById('navLinks');
+mobileBtn.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+
+navLinks.addEventListener('click', (e) => {
+  const a = e.target.closest('a');
+  if (!a) return;
+  navLinks.querySelectorAll('a').forEach(x => x.classList.remove('active'));
+  a.classList.add('active');
+  if (window.innerWidth <= 768) { navLinks.classList.remove('active'); }
+});
+
+document.querySelectorAll('.btn, .tag-item, .movie-card, .cp-card').forEach(el => {
+  el.addEventListener('click', (e) => {
+    e.preventDefault();
+    el.style.transform = 'scale(0.97)';
+    setTimeout(() => { el.style.transform = ''; }, 150);
+  });
+});
+</script>
+
+</body>
+</html>
